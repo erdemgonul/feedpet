@@ -5,10 +5,15 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+public class CreatePet extends FragmentActivity{
 
-public class CreatePet extends FragmentActivity {
+
+    public String nick;
+    public String type;
+    CreatePetNick nickFrag;
+    CreatePetType typeFrag;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +33,10 @@ public class CreatePet extends FragmentActivity {
         public Fragment getItem(int pos) {
             switch(pos) {
 
-                case 0: return CreatePetNick.newInstance();
-                case 1: return CreatePetType.newInstance();
+                case 0: nickFrag=CreatePetNick.newInstance();
+                    return nickFrag;
+                case 1: typeFrag=CreatePetType.newInstance();
+                return typeFrag;
 
             }
             return null;
@@ -39,5 +46,14 @@ public class CreatePet extends FragmentActivity {
         public int getCount() {
             return 2;
         }
+
+
+    }
+
+    public void setNick(String n){
+        this.nick=n;
+    }
+    public void setType(String n){
+        this.type=n;
     }
 }
