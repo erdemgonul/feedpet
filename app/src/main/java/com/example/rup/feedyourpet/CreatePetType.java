@@ -41,7 +41,7 @@ public class CreatePetType extends android.support.v4.app.Fragment{
             @Override
             public void onClick(View view) {
                 x.setType(typey);
-                viewPager.setCurrentItem(0, true);
+                viewPager.setCurrentItem(2, true);
             }
         });
         Animal[] arrayAnimal=new Animal[]{

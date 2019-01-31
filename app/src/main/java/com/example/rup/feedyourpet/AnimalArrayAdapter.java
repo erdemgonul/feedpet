@@ -6,13 +6,10 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class AnimalArrayAdapter extends BaseAdapter {
@@ -31,7 +28,7 @@ public class AnimalArrayAdapter extends BaseAdapter {
 
 
         ImageView imageView=(ImageView) convertView.findViewById(R.id.imageanimal);
-        TextView nameView=(TextView) convertView.findViewById(R.id.typeanimal);
+        TextView nameView=(TextView) convertView.findViewById(R.id.sumtypeanimal);
         TextView descView=(TextView) convertView.findViewById(R.id.descriptionanimal);
 
 

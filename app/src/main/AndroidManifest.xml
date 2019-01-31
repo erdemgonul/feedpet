@@ -12,7 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-
         <activity android:name=".CreateAccount">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +21,12 @@
         </activity>
         <activity android:name=".SignIn" />
         <activity android:name=".SignUp" />
-        <activity android:name=".ForgotPassword"
-            />
-        <activity android:name=".MainScreen"
-            />
-        <activity android:name=".CreatePet" android:exported="true"/>
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".MainScreen" />
+        <activity
+            android:name=".CreatePet"
+            android:exported="true" />
+        <activity android:name=".Dashboard"></activity>
     </application>
 
 </manifest>

@@ -1,19 +1,21 @@
 package com.example.rup.feedyourpet;
 
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-public class CreatePet extends FragmentActivity{
+public class CreatePet extends FragmentActivity {
 
 
     public String nick;
     public String type;
     CreatePetNick nickFrag;
     CreatePetType typeFrag;
-
+    CreatePetSummary sumFrag;
+    public int image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,9 @@ public class CreatePet extends FragmentActivity{
                 case 0: nickFrag=CreatePetNick.newInstance();
                     return nickFrag;
                 case 1: typeFrag=CreatePetType.newInstance();
-                return typeFrag;
+                    return typeFrag;
+                case 2: sumFrag=CreatePetSummary.newInstance();
+                    return sumFrag;
 
             }
             return null;
@@ -44,7 +48,7 @@ public class CreatePet extends FragmentActivity{
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
 
@@ -55,5 +59,17 @@ public class CreatePet extends FragmentActivity{
     }
     public void setType(String n){
         this.type=n;
+
+        switch (n){
+            case "Cat":
+                image=R.drawable.cat;
+                break;
+            case "Dog":
+                image=R.drawable.dog;
+                break;
+            case "Fish":
+                image=R.drawable.fish;
+                break;
+        }
     }
 }
